@@ -3,8 +3,6 @@ import pygame
 import math
 import random
 
-from pygame.font import SysFont
-
 # initialize pygame
 pygame.init()
 
@@ -30,7 +28,7 @@ def to_y(coord_y):
 
 # Draw text on the screen
 def draw_text(text, color, x ,y, text_size, center=True):
-  screen_text = pygame.font(SysFont("Calibri", text_size).render(text, True, color))
+  screen_text = pygame.font.SysFont("Calibri", text_size).render(text, True, color)
   if center:
     rect = screen_text.get_rect()
     rect.center(to_x(x), to_y(y))
@@ -62,7 +60,7 @@ def game():
   # Init variables
   game_state = startingState
   ship_state = "Alive"
-  ship = Ship();
+  ship = Ship()
 
   # Run Game
   while game_state != "Exit":
