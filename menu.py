@@ -53,6 +53,7 @@ def game():
           game_state = "Game"
       pygame.display.update()
 
+
     # User Inputs
     for event in pygame.event.get():
       if event.type == pygame.QUIT:
